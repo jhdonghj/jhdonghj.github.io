@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/categories/">
+  <link rel="canonical" href="http://yoursite-url/en/CS188-notes-4/">
   <title>
     
-      Categories - Set off to this fantasy land
+      Games - Set off to this fantasy land
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -300,29 +300,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="categories/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -374,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/tag_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tag_bg.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/categories_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/tag_bg.jpg'); */
       
     }
 
@@ -404,10 +382,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>Categories</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">Hi , here is Categories ....</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+              
+              <a class="tag" href="/tags/#AI" title="AI">AI</a>
+              
+            </div>
+            <h1>Games</h1>
+            <h2 class="subheading">UCB CS188 Fall 2023 lec6-7 note</h2>
+            <span class="meta">
+              Posted by Fickle on
+              2024-07-19
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">4</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">794</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -448,303 +460,346 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <!-- 分类页面 -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-      
+        <h1 id="Games"><a href="#Games" class="headerlink" title="Games"></a>Games</h1><p><strong>Adversarial search problems</strong>, more commonly known as <strong>games</strong>.</p>
+<h2 id="Type-of-Games"><a href="#Type-of-Games" class="headerlink" title="Type of Games"></a>Type of Games</h2><ul>
+<li>Deterministic or stochastic?</li>
+<li>One, two, or more players?</li>
+<li>Zero sum?</li>
+<li>Perfect information (can you see the state)?</li>
+</ul>
+<h2 id="Deterministic-Games"><a href="#Deterministic-Games" class="headerlink" title="Deterministic Games"></a>Deterministic Games</h2><p>One formalization:</p>
+<ul>
+<li>Initial state, <em>s</em>$_0$</li>
+<li>Players, <em>Players</em>(<em>s</em>) denote whose turn is</li>
+<li>Actions, <em>Actions</em>(<em>s</em>) available actions for the player</li>
+<li>Transition model <em>Result</em>(<em>s</em>,<em>a</em>)</li>
+<li>Terminal test, <em>Terminal</em>−<em>test</em>(<em>s</em>)</li>
+<li>Terminal values, <em>Utility</em>(<em>s</em>, <em>player</em>)</li>
+</ul>
+<p>Solution for a player is a <strong>policy</strong>: S $\to$ A</p>
+<h2 id="Zero-Sum-Games"><a href="#Zero-Sum-Games" class="headerlink" title="Zero-Sum Games"></a>Zero-Sum Games</h2><ul>
+<li>Agents have opposite utilities (values on outcomes)</li>
+<li>A single value that one maximizes and the other minimizes</li>
+<li>Adversarial, pure competition</li>
+</ul>
+<h1 id="Deterministic-Zero-Sum-Games"><a href="#Deterministic-Zero-Sum-Games" class="headerlink" title="Deterministic Zero-Sum Games"></a>Deterministic Zero-Sum Games</h1><h2 id="Game-Tree"><a href="#Game-Tree" class="headerlink" title="Game Tree"></a>Game Tree</h2><p>States and their transitions form a tree. Each state is a node on the tree, each transition is an edge on the tree.</p>
+<p><img src="lec6_1.png" alt="alt text"></p>
+<h2 id="Adversarial-Game-Tree"><a href="#Adversarial-Game-Tree" class="headerlink" title="Adversarial Game Tree"></a>Adversarial Game Tree</h2><p>The rules of the game dictate that the two agents take turns making moves, leading to a game tree where the two agents switch off on layers of the tree that they “control”. An agent having control over a node means it’s their opportunity to decide upon an action and change the game state accordingly.</p>
+<p><img src="lec6_2.png" alt="alt text"></p>
+<h2 id="Adversarial-Search-Minimax"><a href="#Adversarial-Search-Minimax" class="headerlink" title="Adversarial Search (Minimax)"></a>Adversarial Search (Minimax)</h2><p>Compute each node’s minimax value: the best achievable utility against a rational (optimal) adversary</p>
+<p><img src="lec6_3.png" alt="alt text"></p>
+<h2 id="Minimax-Efficiency"><a href="#Minimax-Efficiency" class="headerlink" title="Minimax Efficiency"></a>Minimax Efficiency</h2><ul>
+<li>Just like (exhaustive) DFS</li>
+<li>Time: $O(b^m)$</li>
+<li>Space: $O(bm)$</li>
+</ul>
+<h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><h3 id="Alpha-Beta-Pruning"><a href="#Alpha-Beta-Pruning" class="headerlink" title="Alpha-Beta Pruning"></a>Alpha-Beta Pruning</h3><p>Idea: prune unnecessary searching process(suboptimal states)</p>
+<p><img src="lec6_4.png" alt="alt text"></p>
+<p>Time complexity drops to $O(b^{m/2})$.</p>
+<h3 id="Limiting-Depth"><a href="#Limiting-Depth" class="headerlink" title="Limiting Depth"></a>Limiting Depth</h3><p>Depth-limited search</p>
+<ul>
+<li>Instead, search only to a <strong>limited</strong> depth in the tree</li>
+<li>Replace terminal utilities with an <strong>evaluation function</strong> for non-terminal positions</li>
+</ul>
+<p>Guarantee of optimal play is gone.</p>
+<h3 id="Evaluation-Functions"><a href="#Evaluation-Functions" class="headerlink" title="Evaluation Functions"></a>Evaluation Functions</h3><p>Ideal function: returns the actual minimax value of the position</p>
+<p>In practice: typically weighted linear sum of features:</p>
+<script type="math/tex; mode=display">
+Eval(s) = w_1f_1(s) + w_2f_2(s) + \cdots + w_nf_n(s)</script><p>Each $f_i(s)$ corresponds to a feature extracted from the input state <em>s</em>, e.g. $f_1(s)$=(num white queens – num black queens)</p>
+<h2 id="Expectimax-Search"><a href="#Expectimax-Search" class="headerlink" title="Expectimax Search"></a>Expectimax Search</h2><p>Minimax optimally respound against an <strong>optimal</strong> opponent. However it’s often overly pessimistic in situations where optimal responses to an agent’s actions are <strong>not guaranteed</strong>.</p>
+<p>In this case, we use <strong>average outcome</strong> to replace minimum outcome.</p>
+<p>Expectimax search: compute the average score under optimal play.</p>
+<ul>
+<li><em>Chance nodes</em> replace min nodes in minimax search.</li>
+<li>The outcome of chance nodes are uncertain.</li>
+<li>Calculate their <strong>expected utilities</strong>.</li>
+</ul>
+<h3 id="Pseudocode"><a href="#Pseudocode" class="headerlink" title="Pseudocode"></a>Pseudocode</h3><p><img src="lec7_1.png" alt="alt text"></p>
+<h3 id="About-Prune"><a href="#About-Prune" class="headerlink" title="About Prune"></a>About Prune</h3><p>We should calculate the average outcome of a chance node, so we must iterate over <strong>all its successors</strong> to get the expected outcome. So we <strong>cannot</strong> prune in expectimax search.</p>
+<h1 id="Mixed-Layer-Game"><a href="#Mixed-Layer-Game" class="headerlink" title="Mixed Layer Game"></a>Mixed Layer Game</h1><p>Minimax and expectimax call for alternating maximizer/minimizer nodes and maximizer/chance nodes respectively. But in reality, many games doesn’t follow this pattern.</p>
+<p>Indeed, we can add any layers(maybe with different type) to the search tree.</p>
+<p><img src="lec7_2.png" alt="alt text"></p>
+<h1 id="Monte-Carlo-Tree-Search-MCTS"><a href="#Monte-Carlo-Tree-Search-MCTS" class="headerlink" title="Monte Carlo Tree Search(MCTS)"></a>Monte Carlo Tree Search(MCTS)</h1><p>When the tree becomes bigger, the time complexity of our search algorithm rapidly increases. We need overcome resource limits with <strong>randomization</strong>.</p>
+<p>Monte Carlo Tree Search(MCTS) combines two important ideas:</p>
+<ul>
+<li><strong>Evaluation by rollouts</strong>: From state <em>s</em> play many times using a policy (e.g. random) and count wins/losses.</li>
+<li><strong>Selective search</strong>: explore parts of the tree, without constraints on the horizon, that will improve decision at the root.</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><h3 id="Strategy-1"><a href="#Strategy-1" class="headerlink" title="Strategy 1"></a>Strategy 1</h3><p>Do N rollouts from each child of the root, record fraction of wins.</p>
+<p>Pick the move that gives the best outcome by this metric.</p>
+<p>Problem: best node it might become clear after a few simulations that a certain action does <strong>not</strong><br>return many wins and thus we might choose to allocate this computational effort in doing more simulations for the other actions.</p>
+<h3 id="Strategy-2"><a href="#Strategy-2" class="headerlink" title="Strategy 2"></a>Strategy 2</h3><p>Allocate rollouts to more <strong>promising</strong> nodes(with higher win rate).</p>
+<h3 id="Strategy-3"><a href="#Strategy-3" class="headerlink" title="Strategy 3"></a>Strategy 3</h3><p>Allocate rollouts to more <strong>uncertain</strong> nodes(with fewer tests).</p>
+<p>When some actions yield similar percentages of wins but one of them has used much fewer simulations to estimate that percentage. In this case the estimate of the action that used fewer simulations will have higher variance and hence we might want to allocate a few more simulations to that action to be more confident about the true percentage of wins.</p>
+<h2 id="UCB-Algorithm"><a href="#UCB-Algorithm" class="headerlink" title="UCB Algorithm"></a>UCB Algorithm</h2><p>UCB1 formula combines “promising” and “uncertain”:</p>
+<p><img src="lec7_3.png" alt="alt text"></p>
+<h2 id="MCTS-Algorithm"><a href="#MCTS-Algorithm" class="headerlink" title="MCTS Algorithm"></a>MCTS Algorithm</h2><p><img src="lec7_4.png" alt="alt text"></p>
+<p>MCTS is currently the most common tool for solving hard search problems.</p>
+<p>As $N\to +\infty$ UCT selects the minimax move.</p>
+<p>MCTS can be improved further with machine learning.</p>
+<h1 id="General-Games"><a href="#General-Games" class="headerlink" title="General Games"></a>General Games</h1><ul>
+<li>None-zero-sum games.</li>
+<li>Multi-agent utilities.</li>
+<li>Suboptimal agents.</li>
+<li>……</li>
+</ul>
+<p>Add layers to the search tree.</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>In deterministic zero-sum games, two primary algorithms were considered:</p>
+<ul>
+<li>Minimax: Used when our opponent(s) behaves optimally. Can be optimized using $\alpha-\beta$ pruning.</li>
+<li>Expectimax: Used when we facing a suboptimal opponent(s).</li>
+</ul>
+<p>In most cases, it’s too computationally expensive to run the above algorithms to terminate nodes, so we use evaluation functions to terminate early.</p>
+<p>For problems with large branching factors we described the MCTS and UCT algorithms. </p>
 
-      <!-- 标签云 -->
-      <div id='tag_cloud' class="tags">
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/en/CS188-notes-3/" data-toggle="tooltip" data-placement="top" title="Constraint Satisfaction Problems">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
         
-        <a href="#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="2">Hexo-Theme-LiveMyLife</a>
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
         
-        <a href="#notes" title="notes" rel="7">notes</a>
+
         
-        <a href="#os" title="os" rel="1">os</a>
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Games&body=Hi,I found this website and thought you might like it http://yoursite-url/en/CS188-notes-4/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
         
-        <a href="#Writings" title="Writings" rel="2">Writings</a>
-        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Fri Jul 19 2024 21:52:52 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
       </div>
 
-      <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Hexo-Theme-LiveMyLife">
-          <span class="tag-text">Hexo-Theme-LiveMyLife</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/Hexo-Theme-LiveMyLife/">
-            <h2 class="post-title">
-              Hexo-Theme-LiveMyLife
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              A succinct hexo theme...
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/Hexo-Theme-LiveMyLife/">
-            <h2 class="post-title">
-              Hexo-Theme-LiveMyLife
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              A succinct hexo theme...
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="notes">
-          <span class="tag-text">notes</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/CS188-notes-3/">
-            <h2 class="post-title">
-              Constraint Satisfaction Problems
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              UCB CS188 Fall 2023 lec4-5 note
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/CS188-notes-1/">
-            <h2 class="post-title">
-              What is AI?
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              UCB CS188 Fall 2023 lec1 note
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/CS188-notes-2/">
-            <h2 class="post-title">
-              Search Problem
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              UCB CS188 Fall 2023 lec2-3 note
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/CS242-notes1/">
-            <h2 class="post-title">
-              Syntax and Semantics
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              CS242 notes 1
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/CS188-notes-4/">
-            <h2 class="post-title">
-              Games
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              UCB CS188 Fall 2023 lec6-7 note
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/CS242-notes3/">
-            <h2 class="post-title">
-              Type systems
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              CS242 notes 3
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/CS242-notes2/">
-            <h2 class="post-title">
-              Lambda Calculus
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              CS242 notes 2
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="os">
-          <span class="tag-text">os</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/OS-challenge-task-report/">
-            <h2 class="post-title">
-              OS challenge task report
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              BUAA OS 挑战性任务报告
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Writings">
-          <span class="tag-text">Writings</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/从CryCHIC到Ave-Mujica/">
-            <h2 class="post-title">
-              从CryCHIC到Ave Mujica
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              《BanG Dream! It's MyGO!!!!!》观后感
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/葬送的芙莉莲，从过往走向未来/">
-            <h2 class="post-title">
-              葬送的芙莉莲，从过往走向未来
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              《葬送的芙莉莲》观后感
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Games"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Games</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Type-of-Games"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Type of Games</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Deterministic-Games"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Deterministic Games</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zero-Sum-Games"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Zero-Sum Games</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Deterministic-Zero-Sum-Games"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Deterministic Zero-Sum Games</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Game-Tree"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Game Tree</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Adversarial-Game-Tree"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Adversarial Game Tree</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Adversarial-Search-Minimax"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Adversarial Search (Minimax)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Minimax-Efficiency"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Minimax Efficiency</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Optimization"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Optimization</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Alpha-Beta-Pruning"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">Alpha-Beta Pruning</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Limiting-Depth"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">Limiting Depth</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Evaluation-Functions"><span class="toc-nav-number">2.5.3.</span> <span class="toc-nav-text">Evaluation Functions</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Expectimax-Search"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">Expectimax Search</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Pseudocode"><span class="toc-nav-number">2.6.1.</span> <span class="toc-nav-text">Pseudocode</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#About-Prune"><span class="toc-nav-number">2.6.2.</span> <span class="toc-nav-text">About Prune</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Mixed-Layer-Game"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Mixed Layer Game</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Monte-Carlo-Tree-Search-MCTS"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Monte Carlo Tree Search(MCTS)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Example"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Example</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Strategy-1"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">Strategy 1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Strategy-2"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">Strategy 2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Strategy-3"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">Strategy 3</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#UCB-Algorithm"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">UCB Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MCTS-Algorithm"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">MCTS Algorithm</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#General-Games"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">General Games</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Summary"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Summary</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+            
+            <a class="tag" href="/tags/#AI" title="AI">AI</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
     </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
