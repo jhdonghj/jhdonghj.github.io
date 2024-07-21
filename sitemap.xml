@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite-url/en/CS188-notes-5/</loc>
+    
+    <lastmod>2024-07-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/en/CS188-notes-4/</loc>
     
     <lastmod>2024-07-19</lastmod>
@@ -123,7 +130,7 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -131,56 +138,56 @@
   
   <url>
     <loc>http://yoursite-url/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/CS188/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/AI/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/PL/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/CS242/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/ACG/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/mygo/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/frieren/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -189,28 +196,28 @@
   
   <url>
     <loc>http://yoursite-url/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/notes/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/os/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/Writings/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

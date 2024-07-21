@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/404.html">
+  <link rel="canonical" href="http://yoursite-url/en/CS188-notes-5/">
   <title>
     
-      Set off to this fantasy land
+      CS188 notes 5 - Set off to this fantasy land
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -301,6 +301,8 @@
           
           
           
+          
+          
         </ul>
       </div>
     </div>
@@ -350,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/404_bg.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/404_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/tag_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/404_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/404_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tag_bg.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/404_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/tag_bg.jpg'); */
       
     }
 
@@ -372,6 +374,78 @@
 
 
 
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+              
+              <a class="tag" href="/tags/#AI" title="AI">AI</a>
+              
+            </div>
+            <h1>CS188 notes 5</h1>
+            <h2 class="subheading">UCB CS188 Fall 2023 lec8-9 note</h2>
+            <span class="meta">
+              Posted by Fickle on
+              2024-07-22
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">5</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">954</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
 
 
 
@@ -386,39 +460,348 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<style type="text/css">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1 id="Non-Deterministic-Search"><a href="#Non-Deterministic-Search" class="headerlink" title="Non-Deterministic Search"></a>Non-Deterministic Search</h1><p>Take <em>probability(uncertainty)</em> into consideration.</p>
+<p>The environment in which an agent is placed may subject the agent’s actions to being <strong>nondeterministic</strong>, which means that there are multiple possible successor states that can result from an action taken in some state.</p>
+<p>Such problems where the world poses a degree of uncertainty are known as <strong>nondeterministic search problems</strong>.</p>
+<h1 id="Markov-Decision-Processes"><a href="#Markov-Decision-Processes" class="headerlink" title="Markov Decision Processes"></a>Markov Decision Processes</h1><p>Formal definition:</p>
+<ul>
+<li>A set of states <em>S</em>.</li>
+<li>A set of actions <em>A</em>.</li>
+<li>A start state.</li>
+<li>Possibly one or more terminal states.</li>
+<li>Possibly a <strong>discount factor</strong> $\gamma$.</li>
+<li>A transition function <em>T(s,a,s′)</em>.<ul>
+<li>Probability that action <em>a</em> from <em>s</em> leads to <em>s’</em>, i.e., <strong><em>P(s’| s, a)</em></strong></li>
+</ul>
+</li>
+<li>A reward function <em>R(s,a,s′)</em>.</li>
+</ul>
+<h2 id="Markov"><a href="#Markov" class="headerlink" title="Markov"></a>Markov</h2><p>“Markov” generally means that given the present state, the future and the past are independent.</p>
+<h2 id="Policies"><a href="#Policies" class="headerlink" title="Policies"></a>Policies</h2><p>In deterministic single-agent search problems, we wanted an optimal <strong>plan</strong>, or sequence of actions, from start to a goal.</p>
+<p>For MDPs, we want an optimal policy $\pi^*: S \to A$.</p>
+<ul>
+<li>A policy $\pi$ gives an action for each state</li>
+<li>An optimal policy is one that maximizes<br>expected utility if followed</li>
+<li>An explicit policy defines a reflex agent</li>
+</ul>
+<h2 id="An-example"><a href="#An-example" class="headerlink" title="An example"></a>An example</h2><p><img src="lec8_1.png" alt="alt text"></p>
+<h2 id="MDP-Search-Tree"><a href="#MDP-Search-Tree" class="headerlink" title="MDP Search Tree"></a>MDP Search Tree</h2><p>To model the uncertainty in MDP, we introduce <strong>Q-states</strong>, also known as <strong>action states</strong>(green nodes in the tree).</p>
+<p><img src="lec8_2.png" alt="alt text"></p>
+<h2 id="Utility-of-a-Movement"><a href="#Utility-of-a-Movement" class="headerlink" title="Utility of a Movement"></a>Utility of a Movement</h2><p>The movement of an agent maybe:</p>
+<script type="math/tex; mode=display">
+s_0 \xrightarrow{a_0} s_1 \xrightarrow{a_1} s_2 \xrightarrow{a_2} s_3 \xrightarrow{a_3} \cdots</script><p>The <strong>utility</strong> of this movement can be defined as follows:</p>
+<script type="math/tex; mode=display">
+U([s_0,a_0,s_1,a_1,s_2,\cdots])=
+R(s_0,a_0,s_1)+R(s_1,a_1,s_2)+R(s_2,a_2,s_3)+\cdots</script><h3 id="Discounting-Factor"><a href="#Discounting-Factor" class="headerlink" title="Discounting Factor"></a>Discounting Factor</h3><p>It’s reasonable to <strong>maximize</strong> the sum of rewards.</p>
+<p>It’s also reasonable to prefer rewards <strong>now</strong> to rewards later.</p>
+<p>So we introduce a <strong>discounting factor</strong> $\gamma\in[0,1]$.</p>
+<p>Then the <strong>discounted utility</strong> of the movement can be defined as follows:</p>
+<script type="math/tex; mode=display">
+U([s_0,a_0,s_1,a_1,s_2,\cdots])=
+R(s_0,a_0,s_1)+\gamma R(s_1,a_1,s_2)+\gamma^2 R(s_2,a_2,s_3)+\cdots</script><h2 id="Finite-Horizons"><a href="#Finite-Horizons" class="headerlink" title="Finite Horizons"></a>Finite Horizons</h2><p>It’s good to consider the time constraints. In the example above, we can simply choose <em>a</em> = <em>slow</em> at each step to get infinite rewards. This is prevented by the introduction of <strong>finite horizons</strong> and/or <strong>discount factors</strong>.</p>
+<p>We also have following inequility:</p>
+<script type="math/tex; mode=display">
+U([s_0,a_0,s_1,a_1,s_2,\cdots])=
+\sum_{t=0}^{+\infty}\gamma^t R(s_t,a_t,s_{t+1})\leq 
+\sum_{t=0}^{+\infty}\gamma^t R_{max} = \frac{R_{max}}{1-\gamma}</script><p>Smaller $\gamma$ means smaller horizon - shorter term focus.</p>
+<h2 id="Solving-MDPs"><a href="#Solving-MDPs" class="headerlink" title="Solving MDPs"></a>Solving MDPs</h2><p>Solving a Markov decision process means finding an <strong>optimal policy</strong> $\pi^*: S \to A$.</p>
+<h3 id="The-Bellman-Equation"><a href="#The-Bellman-Equation" class="headerlink" title="The Bellman Equation"></a>The Bellman Equation</h3><ul>
+<li>The optimal value of a state <em>s</em>, $U^*(s)$</li>
+<li>The optimal value of a Q-state <em>(s,a)</em>, $Q^∗(s,a)$</li>
+</ul>
+<p>the Bellman equation is defined as follows:</p>
+<script type="math/tex; mode=display">
+U^*(s) = \max_a Q^*(s,a) \\
+Q^*(s,a) = \sum_{s'} T(s,a,s')[R(s,a,s')+\gamma U^*(s')]</script><p>It describes the relationship between the value of a state and the value of its Q-states.</p>
+<h3 id="Value-Iteration"><a href="#Value-Iteration" class="headerlink" title="Value Iteration"></a>Value Iteration</h3><p>To calculate the optimal values, we need <strong>time limited values</strong> (the natural result of enforcing finite horizons).</p>
+<p>Denote $U_k(s)$ as the value of state <em>s</em> after <em>k</em> iterations. It represents the maximum expected utility attainable from state <em>s</em> in <em>k</em> steps.</p>
+<p><strong>Value iteration</strong> is a <strong>dynamic programming algorithm</strong> that uses an iteratively longer time limit to compute time-limited values until convergence. It operates as follows:</p>
+<ul>
+<li>Initialize $U_0(s) = 0$ for all states <em>s</em>.</li>
+<li>For <em>k</em> = 1, 2, 3, … do:<ul>
+<li>For each state <em>s</em>, compute $U_{k+1}(s) = \max_a Q(s,a)$.</li>
+<li>If $|U_{k+1}(s) - U_k(s)| &lt; \epsilon$ for all states <em>s</em>, then stop.</li>
+</ul>
+</li>
+</ul>
+<p>It’s time complexity is $O(|S|^2|A|)$.</p>
+<p>It’s also guaranteed to converge to the optimal values.</p>
+<h4 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h4><p>For conciseness, denote $U_{k+1}(s) \gets \max_a Q(s,a)$ as $U_{k+1} = BU_k$, where $B$ is the Bellman operator.</p>
+<p>With general inequality:</p>
+<script type="math/tex; mode=display">
+|\max_zf(z)-\max_zg(z)|\leq \max_z|f(z)-g(z)|</script><p>Consider two value functions evaluated at the same state $U(s)$ and $U’(s)$:</p>
+<p><img src="lec8_3.png" alt="alt text"></p>
+<h4 id="Policy-Extraction"><a href="#Policy-Extraction" class="headerlink" title="Policy Extraction"></a>Policy Extraction</h4><p>Recall that our ultimate goal in solving a MDP is to determine an <strong>optimal policy</strong>.This can be done once all optimal values for states are determined using a method called <strong>policy extraction</strong>.</p>
+<p>The optimal policy $\pi^*$ is:</p>
+<script type="math/tex; mode=display">
+\forall s \in S,\pi^*(s)=\arg\max_a Q^*(s,a)\\
+= \arg\max_a \sum_{s'} T(s,a,s')[R(s,a,s')+\gamma U^*(s')]</script><h4 id="Q-Value-Interation"><a href="#Q-Value-Interation" class="headerlink" title="Q-Value Interation"></a>Q-Value Interation</h4><p>In policy extraction, we may use the value of $Q^*(s,a)$. It can be calculated by Q-value iteration.</p>
+<p><strong>Q-value iteration</strong> is a dynamic programming algorithm that computes time-limited Q-values. It is described in the following equation:</p>
+<script type="math/tex; mode=display">
+Q_{k+1}(s,a) \gets \sum_{s'} T(s,a,s')[R(s,a,s')+\gamma \max_{a'} Q_k(s',a')]</script><h3 id="Policy-Iteration"><a href="#Policy-Iteration" class="headerlink" title="Policy Iteration"></a>Policy Iteration</h3><p>Problem with value iteration:</p>
+<ul>
+<li>It’s slow – $O(S^2A)$ per iteration</li>
+<li>The “max” at each state rarely changes</li>
+<li>The policy often converges long before the values</li>
+</ul>
+<h4 id="Policy-Evaluation"><a href="#Policy-Evaluation" class="headerlink" title="Policy Evaluation"></a>Policy Evaluation</h4><p>For a fixed policy $\pi$, the <strong>utility</strong> of a state <em>s</em> is:</p>
+<script type="math/tex; mode=display">
+U^\pi(s) = \sum_{s'} T(s,\pi(s),s')[R(s,\pi(s),s')+\gamma U^\pi(s')]</script><p>Benefit: it’s linear (without $\max$ opeartion compared to value iteration).</p>
+<p>Then we can do <strong>policy iteration</strong>:</p>
+<script type="math/tex; mode=display">
+U_{k+1}^{\pi_i}(s) = \sum_{s'} T(s,\pi_i(s),s')[R(s,\pi_i(s),s')+\gamma U_{k}^{\pi_i}(s')]</script><p>Alternatively, we can do <strong>policy improvement</strong>:</p>
+<script type="math/tex; mode=display">
+\pi_{i+1}(s) = \arg\max_a \sum_{s'} T(s,a,s')[R(s,a,s')+\gamma U_{k}^{\pi_i}(s')]</script><p>If $\pi_{i+1}=\pi_i$, the algorithm <strong>converges</strong> and we have found the optimal policy.</p>
+<p>Efficiency: $O(S^2)$ per iteration.</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/en/CS188-notes-4/" data-toggle="tooltip" data-placement="top" title="Games">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=CS188 notes 5&body=Hi,I found this website and thought you might like it http://yoursite-url/en/CS188-notes-5/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
   
-    .body--light {
-      /* intro-header */
-      --intro-header-background-image-url-404: url('/img/header_img/404_bg.jpg');
-    }
-    .body--dark {
-      --intro-header-background-image-url-404: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/404_bg.jpg');
-    }
-    header.intro-header {
-      background-image: var(--intro-header-background-image-url-404);
-    }
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
   
 
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Mon Jul 22 2024 06:30:25 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Non-Deterministic-Search"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Non-Deterministic Search</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Markov-Decision-Processes"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Markov Decision Processes</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Markov"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Markov</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Policies"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Policies</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#An-example"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">An example</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MDP-Search-Tree"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">MDP Search Tree</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Utility-of-a-Movement"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Utility of a Movement</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Discounting-Factor"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">Discounting Factor</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Finite-Horizons"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">Finite Horizons</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Solving-MDPs"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">Solving MDPs</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#The-Bellman-Equation"><span class="toc-nav-number">2.7.1.</span> <span class="toc-nav-text">The Bellman Equation</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Value-Iteration"><span class="toc-nav-number">2.7.2.</span> <span class="toc-nav-text">Value Iteration</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Proof"><span class="toc-nav-number">2.7.2.1.</span> <span class="toc-nav-text">Proof</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Policy-Extraction"><span class="toc-nav-number">2.7.2.2.</span> <span class="toc-nav-text">Policy Extraction</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Q-Value-Interation"><span class="toc-nav-number">2.7.2.3.</span> <span class="toc-nav-text">Q-Value Interation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Policy-Iteration"><span class="toc-nav-number">2.7.3.</span> <span class="toc-nav-text">Policy Iteration</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Policy-Evaluation"><span class="toc-nav-number">2.7.3.1.</span> <span class="toc-nav-text">Policy Evaluation</span></a></li></ol></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+            
+            <a class="tag" href="/tags/#AI" title="AI">AI</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
 </style>
 
-<!-- Page Header -->
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>404</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">I&#39;m sorry there is nothing that you want , but you can enjoy the scenery here ...</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<script>
-    document.body.classList.add('page-fullscreen');
-</script>
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
