@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tags/PL/">
+  <link rel="canonical" href="http://yoursite-url/en/CS188-notes-7/">
   <title>
     
-      Set off to this fantasy land
+      Bayes&#39; Nets - Set off to this fantasy land
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -300,29 +300,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="tags/PL/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -374,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/tag_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tag_bg.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/tag_bg.jpg'); */
       
     }
 
@@ -404,10 +382,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>启程于此幻想之地</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">随笔、博客、记录</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+              
+              <a class="tag" href="/tags/#AI" title="AI">AI</a>
+              
+            </div>
+            <h1>Bayes&#39; Nets</h1>
+            <h2 class="subheading">UCB CS188 Fall 2023 lec13-16 note</h2>
+            <span class="meta">
+              Posted by Fickle on
+              2024-08-01
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">6</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -448,366 +460,376 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2024">
-          <span class="tag-text">2024</span>
-        </span>
-        <ul>
-          
-          <li>
-            08-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-7/" style="color: #0085a1">
-              <span>
-                Bayes' Nets
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            08-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-6/" style="color: #0085a1">
-              <span>
-                Reinforcement Learning
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-22
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-5/" style="color: #0085a1">
-              <span>
-                Non-Deterministic Search
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-4/" style="color: #0085a1">
-              <span>
-                Games
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-3/" style="color: #0085a1">
-              <span>
-                Constraint Satisfaction Problems
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-2/" style="color: #0085a1">
-              <span>
-                Search Problem
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-1/" style="color: #0085a1">
-              <span>
-                What is AI?
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-08
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/葬送的芙莉莲，从过往走向未来/" style="color: #0085a1">
-              <span>
-                葬送的芙莉莲，从过往走向未来
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/OS-challenge-task-report/" style="color: #0085a1">
-              <span>
-                OS challenge task report
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-03
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS242-notes3/" style="color: #0085a1">
-              <span>
-                Type systems
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS242-notes2/" style="color: #0085a1">
-              <span>
-                Lambda Calculus
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS242-notes1/" style="color: #0085a1">
-              <span>
-                Syntax and Semantics
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/从CryCHIC到Ave-Mujica/" style="color: #0085a1">
-              <span>
-                从CryCHIC到Ave Mujica
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-          <span class="tag-text">2020</span>
-        </span>
-        <ul>
-          
-          <li>
-            04-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
-              <span>
-                Hexo-Theme-LiveMyLife
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
-              <span>
-                Hexo-Theme-LiveMyLife
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="2">Hexo-Theme-LiveMyLife</a>
-    
-    
-    
-    <a href="/tags/#CS188" title="CS188" rel="7">CS188</a>
-    
-    
-    
-    <a href="/tags/#AI" title="AI" rel="7">AI</a>
-    
-    
-    
-    <a href="/tags/#PL" title="PL" rel="3">PL</a>
-    
-    
-    
-    <a href="/tags/#CS242" title="CS242" rel="3">CS242</a>
-    
-    
-    
-    <a href="/tags/#ACG" title="ACG" rel="2">ACG</a>
-    
-    
-    
-    <a href="/tags/#mygo" title="mygo" rel="1">mygo</a>
-    
-    
-    
-    <a href="/tags/#frieren" title="frieren" rel="1">frieren</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">RECENT POSTS</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../en/CS188-notes-7/">
-      <li>Bayes&#39; Nets</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-6/">
-      <li>Reinforcement Learning</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-5/">
-      <li>Non-Deterministic Search</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-4/">
-      <li>Games</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-3/">
-      <li>Constraint Satisfaction Problems</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5><a href="/">FRIENDS</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
-  
+        <h1 id="Bayes’-Nets"><a href="#Bayes’-Nets" class="headerlink" title="Bayes’ Nets"></a>Bayes’ Nets</h1><p>Bayes’ nets: a technique for describing <strong>complex</strong> joint distributions (models) using <strong>simple, local</strong> distributions (conditional probabilities)</p>
+<h2 id="Semantics"><a href="#Semantics" class="headerlink" title="Semantics"></a>Semantics</h2><p>Bayes’ nets consist of:</p>
+<ul>
+<li>A directed, acyclic graph of nodes, one per variable $X$</li>
+<li>A conditional distribution for each node $P(X|A_1\dots A_n)$, where $A_i$ is the $i^{th}$ parent of $X$, sorted as a <strong>conditional probability table (CPT)</strong>. Each CPT has $n+2$ columns: $n$ parent values, 1 child value, and 1 probability value.</li>
 </ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><img src="lec13_1.png" alt="alt text"></p>
+<p>In this Bayes Net, we would store probability tables $P(B),P(E),P(A|B,E),P(J|A)$ and $P(M|A)$.</p>
+<h2 id="Structure-of-Bayes-Nets"><a href="#Structure-of-Bayes-Nets" class="headerlink" title="Structure of Bayes Nets"></a>Structure of Bayes Nets</h2><ul>
+<li><strong>Each node is conditionally independent of all its ancestor nodes (non-descendants) in the graph, given all of its parents.</strong><ul>
+<li>在已知父节点状态的情况下，节点与其祖先节点独立</li>
+</ul>
+</li>
+<li><strong>Each node is conditionally independent of all other variables given its Markov blanket.</strong> A variable’s Markov blanket consists of parents, children, children’s other parents</li>
+</ul>
+<h2 id="Calculation-of-Joint-Probability"><a href="#Calculation-of-Joint-Probability" class="headerlink" title="Calculation of Joint Probability"></a>Calculation of Joint Probability</h2><p>According to above structure, we have:</p>
+<script type="math/tex; mode=display">
+P(X_1,\dots,X_n) = \prod_{i=1}^{n}P(X_i|Parents(X_i))</script><p>In the example</p>
+<script type="math/tex; mode=display">
+P(B,E,A,J,M) = P(B)P(E)P(A|B,E)P(J|A)P(M|A) \\
+= P(B)P(E|B)P(A|B,E)P(J|B,E,A)P(M|B,E,A,J)</script><p>Because each node is conditionally independent of all its ancestor nodes (non-descendants) in the graph, given all of its parents, above equation holds.</p>
+<p><img src="lec14_1.png" alt="alt text"></p>
+<h2 id="Size-of-Bayes’-Nets"><a href="#Size-of-Bayes’-Nets" class="headerlink" title="Size of Bayes’ Nets"></a>Size of Bayes’ Nets</h2><p>Size of a joint distribution over N boolean variables: $2^N$</p>
+<p>Size of a N-node net with up to k parents per node: $O(N\cdot 2^{k+1})$</p>
+<p>Bayes’ nets save a huge space.</p>
+<h1 id="D-separation"><a href="#D-separation" class="headerlink" title="D-separation"></a>D-separation</h1><p>How to judge a set of nodes in a BN is <strong>independent</strong> of another set of nodes with given properties or not?</p>
+<p>We firstly dive into three easy cases.</p>
+<h2 id="Causal-Chains-因果链"><a href="#Causal-Chains-因果链" class="headerlink" title="Causal Chains(因果链)"></a>Causal Chains(因果链)</h2><p><img src="lec14_2.png" alt="alt text"></p>
+<p>X and Z are not guaranteed to be independent obviously.</p>
+<p>However, when Y is given, X and Z are independent, proof below:</p>
+<p><img src="lec14_3.png" alt="alt text"></p>
+<p>So we get $X\perp Z|Y$</p>
+<h2 id="Common-Cause-共同原因"><a href="#Common-Cause-共同原因" class="headerlink" title="Common Cause(共同原因)"></a>Common Cause(共同原因)</h2><p><img src="lec14_4.png" alt="alt text"></p>
+<p>X and Z are not guaranteed to be independent obviously.</p>
+<p>However, when Y is given, X and Z are independent, proof below:</p>
+<p><img src="lec14_5.png" alt="alt text"></p>
+<h2 id="Common-Effect-共同结果"><a href="#Common-Effect-共同结果" class="headerlink" title="Common Effect(共同结果)"></a>Common Effect(共同结果)</h2><p><img src="lec14_6.png" alt="alt text"></p>
+<p>X and Z are independent.</p>
+<p>However, when Y is given, X and Z are not guaranteed to be independent, example below:</p>
+<p>X, Y and Z are three boolean variables. X and Z are true and false with equal probability. Y is true if X and Z are the same, and false otherwise.</p>
+<h2 id="General-Case-and-D-separation"><a href="#General-Case-and-D-separation" class="headerlink" title="General Case, and D-separation"></a>General Case, and D-separation</h2><p>General problem:</p>
+<p>Given a Bayes Net $G$, two nodes $X$ and $Y$, and a (possibly empty) set of nodes $\{Z_1,\dots,Z_k\}$ that are observed, is $X$ independent of $Y$ under given conditions?</p>
+<p><strong>D-separation algorithm:</strong></p>
+<ol>
+<li>Shade all observed nodes $\{Z_1,\dots,Z_k\}$ in the graph.</li>
+<li>Enumerate all paths from $X$ to $Y$.</li>
+<li>For each path:<ol>
+<li>Decompose the path into triples (segments of 3 nodes).</li>
+<li>If all triples are active, this path is active and <em>d-connects</em> X to Y.</li>
+</ol>
+</li>
+<li>If no path d-connects X to Y, then X and Y are d-separated, so they are conditionally independent given $\{Z_1,\dots,Z_k\}$.</li>
+</ol>
+<p><img src="lec14_7.png" alt="alt text"></p>
+<h1 id="Inference"><a href="#Inference" class="headerlink" title="Inference"></a>Inference</h1><p>Inference: calculating some useful quantity from a joint probability distribution. In other words, finding the value of some probability distribution $P(Q_1\dots Q_k|e_1\dots e_k)$.</p>
+<h2 id="Inference-by-Enumeration"><a href="#Inference-by-Enumeration" class="headerlink" title="Inference by Enumeration"></a>Inference by Enumeration</h2><ul>
+<li>找到所有隐藏变量</li>
+<li>对所有可能的取值求和</li>
+<li>归一化</li>
+</ul>
+<p><img src="lec15_1.png" alt="alt text"></p>
+<h2 id="Variable-Elimination"><a href="#Variable-Elimination" class="headerlink" title="Variable Elimination"></a>Variable Elimination</h2><h3 id="Factor"><a href="#Factor" class="headerlink" title="Factor"></a>Factor</h3><p>A factor is defined simply as an <em>unnormalized probability</em>.</p>
+<p>$P(Y_1\dots Y_n|X_1\dots X_m)$ is a factor. Its values are $P(y_1\dots y_n|x_1\dots x_m)$.</p>
+<p>一个P的所有可能取值的表就是factor。</p>
+<h3 id="Join-Factors"><a href="#Join-Factors" class="headerlink" title="Join Factors"></a>Join Factors</h3><p>Join two factors into one factor based on common variables.</p>
+<p><img src="lec15_2.png" alt="alt text"></p>
+<h3 id="Eliminate-Variables"><a href="#Eliminate-Variables" class="headerlink" title="Eliminate Variables"></a>Eliminate Variables</h3><p>Take a factor and sum out a variable. Shrinks a factor to a smaller one.</p>
+<p><img src="lec15_3.png" alt="alt text"></p>
+<p>Multiple Join, Multiple Eliminate (= Inference by Enumeration)</p>
+<p>Marginalizing Early (= Variable Elimination)</p>
+<h3 id="Evidence"><a href="#Evidence" class="headerlink" title="Evidence"></a>Evidence</h3><p><img src="lec15_4.png" alt="alt text"></p>
+<p><img src="lec15_5.png" alt="alt text"></p>
+<h3 id="General-Variable-Elimination"><a href="#General-Variable-Elimination" class="headerlink" title="General Variable Elimination"></a>General Variable Elimination</h3><p>Query: $P(Q|E_1=e_1,\dots,E_k=e_k)$.</p>
+<ol>
+<li>Start with initial factors (CPTs)</li>
+<li>While there are hidden variables:<ol>
+<li>Select a hidden variable $X$.</li>
+<li>Find all factors that mention $X$.</li>
+<li>Join these factors.</li>
+<li>Eliminate $X$ by summing out.</li>
+</ol>
+</li>
+<li>Join all remaining factors and normalize.</li>
+</ol>
+<h3 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h3><p>Order of elimination matters a lot.</p>
+<p>Solving VE can be reduced to solving 3-SAT problem, so it is NP-hard.</p>
+<p>On polytrees(a directed acyclic graph, DAG), VE is linear in the size of the network.</p>
+<h2 id="Approximate-Inference-Sampling"><a href="#Approximate-Inference-Sampling" class="headerlink" title="Approximate Inference: Sampling"></a>Approximate Inference: Sampling</h2><p>An alternate approach for probabilistic reasoning is to implicitly calculate the probabilities for our query by simply counting samples.</p>
+<h3 id="Prior-Sampling"><a href="#Prior-Sampling" class="headerlink" title="Prior Sampling"></a>Prior Sampling</h3><p>Sample in topological order.</p>
+<p><img src="lec16_1.png" alt="alt text"></p>
+<p>Sample code in Python:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_t</span>():</span></span><br><span class="line">   <span class="keyword">if</span> random.random() &lt; <span class="number">0.99</span>:</span><br><span class="line">   <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">   <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_c</span>(<span class="params">t</span>):</span></span><br><span class="line">   <span class="keyword">if</span> t <span class="keyword">and</span> random.random() &lt; <span class="number">0.95</span>:</span><br><span class="line">   <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">   <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_sample</span>():</span></span><br><span class="line">   t = get_t()</span><br><span class="line">   c = get_c(t)</span><br><span class="line">   <span class="keyword">return</span> [t, c]</span><br></pre></td></tr></table></figure>
+<p>Downside: may sample many irrelevant variables. If we want to compute $P(C|-t)$, we’d have to throw away 99% of our samples.</p>
+<h3 id="Rejection-Sampling"><a href="#Rejection-Sampling" class="headerlink" title="Rejection Sampling"></a>Rejection Sampling</h3><p>Early rejection of samples that don’t match evidence.</p>
+<p>For example, for the query $P(C|-t)$, we’d avoid generating a value for C unless t is false.</p>
+<h3 id="Likelihood-Weighting"><a href="#Likelihood-Weighting" class="headerlink" title="Likelihood Weighting"></a>Likelihood Weighting</h3><p>Idea: fix evidence variables and sample the rest</p>
+<p>Sample with a parameter $w$ storing the weight of the sample. Change $w$ when evidence is going to be sampled.</p>
+<p><img src="lec16_2.png" alt="alt text"></p>
+<p>Weighted sampling distribution is consistent.</p>
+<p>In likelihood weighting, evidence influences the choice of downstream variables, but not upstream ones. It leads to Gibbs sampling.</p>
+<h3 id="Gibbs-Sampling"><a href="#Gibbs-Sampling" class="headerlink" title="Gibbs Sampling"></a>Gibbs Sampling</h3><p>Steps:</p>
+<ol>
+<li>Set all variables(except evidence variable) to some totally random value. Set evidence variable to the given value.</li>
+<li>Repeatedly pick one variable at a time, clear its value, and resample it given the values currently assigned to all other variables.</li>
+</ol>
+<p><img src="lec16_3.png" alt="alt text"></p>
+<p><img src="lec16_5.png" alt="alt text"></p>
+<p><img src="lec16_4.png" alt="alt text"></p>
+<h2 id="Inference-Summary"><a href="#Inference-Summary" class="headerlink" title="Inference Summary"></a>Inference Summary</h2><p>The exact inference algorithms covered were:</p>
+<ul>
+<li>Inference By Enumeration</li>
+<li>Variable Elimination</li>
+</ul>
+<p>The sampling algorithms covered were:</p>
+<ul>
+<li>Prior Sampling</li>
+<li>Rejection Sampling</li>
+<li>Likelihood Weighting</li>
+<li>Gibbs Sampling</li>
+</ul>
+<h1 id="Conclution"><a href="#Conclution" class="headerlink" title="Conclution"></a>Conclution</h1><p>Bayes’ Nets is a powerful representation of <strong>joint probability distributions</strong>. Its topological structure encodes <strong>independence and conditional independence relationships</strong>, and we can use it to <strong>model arbitrary distributions</strong> to perform inference and sampling.</p>
 
 
         <hr>
-    
-        <!-- Archives -->
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/en/CS188-notes-6/" data-toggle="tooltip" data-placement="top" title="Reinforcement Learning">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/08/">August 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/07/">July 2024</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/03/">March 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/02/">February 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
 </div>
+<!-- tip end -->
 
+        <!-- tip end -->
+        
 
-        <hr>
-    
-        <!-- Categories -->
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-    <a href="/categories/#notes">
-      <li>notes</li>
-    </a>
-    
-    <a href="/categories/#os">
-      <li>os</li>
-    </a>
-    
-    <a href="/categories/#Writings">
-      <li>Writings</li>
-    </a>
-    
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Bayes&#39; Nets&body=Hi,I found this website and thought you might like it http://yoursite-url/en/CS188-notes-7/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
+        <!-- Sharing End -->
+        
         <hr>
-    
-</div>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Aug 01 2024 10:53:39 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
 
 
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Bayes%E2%80%99-Nets"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Bayes’ Nets</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Semantics"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Semantics</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Example"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Example</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Structure-of-Bayes-Nets"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Structure of Bayes Nets</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Calculation-of-Joint-Probability"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Calculation of Joint Probability</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Size-of-Bayes%E2%80%99-Nets"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Size of Bayes’ Nets</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#D-separation"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">D-separation</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Causal-Chains-%E5%9B%A0%E6%9E%9C%E9%93%BE"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Causal Chains(因果链)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Common-Cause-%E5%85%B1%E5%90%8C%E5%8E%9F%E5%9B%A0"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Common Cause(共同原因)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Common-Effect-%E5%85%B1%E5%90%8C%E7%BB%93%E6%9E%9C"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Common Effect(共同结果)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#General-Case-and-D-separation"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">General Case, and D-separation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Inference"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Inference</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Inference-by-Enumeration"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Inference by Enumeration</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Variable-Elimination"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Variable Elimination</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Factor"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">Factor</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Join-Factors"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">Join Factors</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Eliminate-Variables"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">Eliminate Variables</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Evidence"><span class="toc-nav-number">3.2.4.</span> <span class="toc-nav-text">Evidence</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#General-Variable-Elimination"><span class="toc-nav-number">3.2.5.</span> <span class="toc-nav-text">General Variable Elimination</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Complexity"><span class="toc-nav-number">3.2.6.</span> <span class="toc-nav-text">Complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Approximate-Inference-Sampling"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Approximate Inference: Sampling</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Prior-Sampling"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">Prior Sampling</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Rejection-Sampling"><span class="toc-nav-number">3.3.2.</span> <span class="toc-nav-text">Rejection Sampling</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Likelihood-Weighting"><span class="toc-nav-number">3.3.3.</span> <span class="toc-nav-text">Likelihood Weighting</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gibbs-Sampling"><span class="toc-nav-number">3.3.4.</span> <span class="toc-nav-text">Gibbs Sampling</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Inference-Summary"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Inference Summary</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Conclution"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Conclution</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+            
+            <a class="tag" href="/tags/#AI" title="AI">AI</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
