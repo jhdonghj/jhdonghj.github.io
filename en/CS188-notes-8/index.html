@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tags/PL/">
+  <link rel="canonical" href="http://yoursite-url/en/CS188-notes-8/">
   <title>
     
-      Set off to this fantasy land
+      Hidden Markov Models - Set off to this fantasy land
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -300,29 +300,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="tags/PL/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -374,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/tag_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/home.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tag_bg.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/tag_bg.jpg'); */
       
     }
 
@@ -404,10 +382,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>启程于此幻想之地</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">随笔、博客、记录</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+              
+              <a class="tag" href="/tags/#AI" title="AI">AI</a>
+              
+            </div>
+            <h1>Hidden Markov Models</h1>
+            <h2 class="subheading">UCB CS188 Fall 2023 lec10-11 note</h2>
+            <span class="meta">
+              Posted by Fickle on
+              2024-09-02
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">3</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">626</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -448,388 +460,299 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2024">
-          <span class="tag-text">2024</span>
-        </span>
-        <ul>
-          
-          <li>
-            09-02
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-9/" style="color: #0085a1">
-              <span>
-                Machine Learning
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-02
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-8/" style="color: #0085a1">
-              <span>
-                Hidden Markov Models
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            08-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-7/" style="color: #0085a1">
-              <span>
-                Bayes' Nets
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            08-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-6/" style="color: #0085a1">
-              <span>
-                Reinforcement Learning
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-22
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-5/" style="color: #0085a1">
-              <span>
-                Markov Decision Processes
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-4/" style="color: #0085a1">
-              <span>
-                Games
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-3/" style="color: #0085a1">
-              <span>
-                Constraint Satisfaction Problems
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-2/" style="color: #0085a1">
-              <span>
-                Search Problem
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS188-notes-1/" style="color: #0085a1">
-              <span>
-                What is AI?
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-08
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/葬送的芙莉莲，从过往走向未来/" style="color: #0085a1">
-              <span>
-                葬送的芙莉莲，从过往走向未来
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/OS-challenge-task-report/" style="color: #0085a1">
-              <span>
-                OS challenge task report
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-03
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS242-notes3/" style="color: #0085a1">
-              <span>
-                Type systems
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS242-notes2/" style="color: #0085a1">
-              <span>
-                Lambda Calculus
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/CS242-notes1/" style="color: #0085a1">
-              <span>
-                Syntax and Semantics
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/从CryCHIC到Ave-Mujica/" style="color: #0085a1">
-              <span>
-                从CryCHIC到Ave Mujica
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-          <span class="tag-text">2020</span>
-        </span>
-        <ul>
-          
-          <li>
-            04-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
-              <span>
-                Hexo-Theme-LiveMyLife
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
-              <span>
-                Hexo-Theme-LiveMyLife
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="2">Hexo-Theme-LiveMyLife</a>
-    
-    
-    
-    <a href="/tags/#CS188" title="CS188" rel="9">CS188</a>
-    
-    
-    
-    <a href="/tags/#AI" title="AI" rel="9">AI</a>
-    
-    
-    
-    <a href="/tags/#PL" title="PL" rel="3">PL</a>
-    
-    
-    
-    <a href="/tags/#CS242" title="CS242" rel="3">CS242</a>
-    
-    
-    
-    <a href="/tags/#ACG" title="ACG" rel="2">ACG</a>
-    
-    
-    
-    <a href="/tags/#mygo" title="mygo" rel="1">mygo</a>
-    
-    
-    
-    <a href="/tags/#frieren" title="frieren" rel="1">frieren</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">RECENT POSTS</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../en/CS188-notes-9/">
-      <li>Machine Learning</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-8/">
-      <li>Hidden Markov Models</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-7/">
-      <li>Bayes&#39; Nets</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-6/">
-      <li>Reinforcement Learning</li>
-    </a>
-    
-    <a href="../../en/CS188-notes-5/">
-      <li>Markov Decision Processes</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5><a href="/">FRIENDS</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
-  
+        <h1 id="Markov-Model"><a href="#Markov-Model" class="headerlink" title="Markov Model"></a>Markov Model</h1><p>A markov model is a sequence of states(maybe infinite) where the probability of transitioning to the next state depends only on the current state. This is called the <strong>Markov Property</strong>.</p>
+<p>Formally, assume $W_0,W_1,\dots,W_n,\dots$ are a sequence of states. The Markov property states that:</p>
+<script type="math/tex; mode=display">P(W_{n+1} = w | W_0 = w_0, W_1 = w_1, \dots, W_n = w_n) = P(W_{n+1} = w | W_n = w_n)</script><p>In other words:</p>
+<script type="math/tex; mode=display">P(W_0,W_1,\dots,W_n)=P(W_0)\prod_{i=1}^{n}P(W_i|W_{i-1})</script><h2 id="The-Mini-Forward-Algorithm"><a href="#The-Mini-Forward-Algorithm" class="headerlink" title="The Mini-Forward Algorithm"></a>The Mini-Forward Algorithm</h2><p>If we know $W_i=w_i$, the distribution of $W_{i+1}$ can be computed as:</p>
+<script type="math/tex; mode=display">P(W_{i+1})=\sum_{w_i}P(W_{i+1}|W_i=w_i)P(W_i=w_i)</script><p>That means to compute the distribution of $W_{i+1}$, we only need to know the distribution of $W_i$ and the transition probabilities.</p>
+<h2 id="Stationary-Distribution"><a href="#Stationary-Distribution" class="headerlink" title="Stationary Distribution"></a>Stationary Distribution</h2><p>As time goes to infinity, the distribution of the states will converge to a <strong>stationary distribution</strong> $P_{\infty}$. This is the distribution that remains the same after each transition. It satisfies:</p>
+<script type="math/tex; mode=display">P_{\infty}(W)=\sum_{w'}P(W|w')P_{\infty}(w')</script><h1 id="Hidden-Markov-Models"><a href="#Hidden-Markov-Models" class="headerlink" title="Hidden Markov Models"></a>Hidden Markov Models</h1><p>Sometimes, the states are not directly observable and we can only ovserve the outputs of the states. Here is where <strong>Hidden Markov Models</strong> come into play.</p>
+<p><img src="lec18_1.png" alt="alt text"></p>
+<p>We can call each $W_i$ a state variable and each $F_i$ an evidence variable. And following relationships hold:</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+F_1 &\perp W_0 | W_1 \\
+\forall i \geq 2, F_i &\perp W_0,\dots,W_{i-1},F_1,\dots,F_{i-1} | W_i \\
+\forall i \geq 1, W_i &\perp W_0,\dots,W_{i-2},F_1,\dots,F_{i-1} | W_{i-1}
+\end{aligned}</script><p>The <strong>belief distribution</strong> at time $i$ with all evidence $F_1,\dots,F_i$ observed is:</p>
+<script type="math/tex; mode=display">B(W_i)=P(W_i|F_1,\dots,F_i)</script><p>Similarly, the belief distribution at time $i$ without knowing the evidence $F_i$ is:</p>
+<script type="math/tex; mode=display">B'(W_i)=P(W_i|F_1,\dots,F_{i-1})</script><h2 id="The-Forward-Algorithm"><a href="#The-Forward-Algorithm" class="headerlink" title="The Forward Algorithm"></a>The Forward Algorithm</h2><p>The <strong>forward algorithm</strong> yields the transition from $B(W_i)$ to $B’(W_i)$:</p>
+<script type="math/tex; mode=display">B'(W_{i+1})=\sum_{w_{i}}P(W_{i+1}|w_i)B(w_i)</script><h1 id="Particle-Filtering"><a href="#Particle-Filtering" class="headerlink" title="Particle Filtering"></a>Particle Filtering</h1><p>Sometimes the state space is too large to run the exact inference. We need to approximate inference.</p>
+<ul>
+<li>Track samples of X, not all values</li>
+<li>Samples are called particles</li>
+<li>Time per step is linear in the number of samples</li>
 </ul>
+<p>Now that we’ve seen how to recover a belief distribution from a particle list, all that remains to be discussed is how to generate such a list for a timestep of our choosing.</p>
+<h2 id="Particle-Filtering-Simulation"><a href="#Particle-Filtering-Simulation" class="headerlink" title="Particle Filtering Simulation"></a>Particle Filtering Simulation</h2><p>Particle filtering simulation begins with particle initialization. And then the simulation takes a time elapse update followed by an ovservation update at each timestamp.</p>
+<ul>
+<li><em>Time Elapse Update</em>: Update the value of each particle according to the transition model. That is $t_i\gets \text{sample}(P(T_{i+1}|t_i))$</li>
+<li><em>Observation Update</em>: Use the <strong>sensor model</strong> $P(F_i|T_i)$ to <strong>weight</strong> each particle according to the probability dictated by the <strong>observed evidence</strong> and the particle’s state. The algorithm of observation update is as follows:<ul>
+<li>Calculate the weights of all particles according to $P(f_i|t_i)$ where the sensor reading is $f_i$.</li>
+<li>Calculate the total weight for each state.</li>
+<li>If the sum of all weights across all states is 0, reinitialize all particles.</li>
+<li>Else, normalize the distribution of total weights over states and resample your list of particles from this distribution.</li>
+</ul>
+</li>
+</ul>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ul>
+<li>Markov models encode time-dependent random variables with the Markov property. We use probability inference to compute the belief distribution.</li>
+<li>Hidden Markov Models are Markov models with hidden states. We compute the belief distribution by observing evidence.</li>
+</ul>
+<p>Sometimes, running exact inference on these models can be too computationally expensive, in which case we can use particle filtering as a method of approximate inference.</p>
 
 
         <hr>
-    
-        <!-- Archives -->
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/CS188-notes-9/" data-toggle="tooltip" data-placement="top" title="Machine Learning">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/CS188-notes-7/" data-toggle="tooltip" data-placement="top" title="Bayes' Nets">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/09/">September 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/08/">August 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/07/">July 2024</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/03/">March 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/02/">February 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
 </div>
+<!-- tip end -->
 
+        <!-- tip end -->
+        
 
-        <hr>
-    
-        <!-- Categories -->
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-    <a href="/categories/#notes">
-      <li>notes</li>
-    </a>
-    
-    <a href="/categories/#Writings">
-      <li>Writings</li>
-    </a>
-    
-    <a href="/categories/#os">
-      <li>os</li>
-    </a>
-    
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Hidden Markov Models&body=Hi,I found this website and thought you might like it http://yoursite-url/en/CS188-notes-8/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
+        <!-- Sharing End -->
+        
         <hr>
-    
-</div>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Mon Sep 02 2024 16:16:56 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
 
 
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Markov-Model"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Markov Model</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#The-Mini-Forward-Algorithm"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">The Mini-Forward Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Stationary-Distribution"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Stationary Distribution</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Hidden-Markov-Models"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Hidden Markov Models</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#The-Forward-Algorithm"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">The Forward Algorithm</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Particle-Filtering"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Particle Filtering</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Particle-Filtering-Simulation"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Particle Filtering Simulation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Summary"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Summary</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#CS188" title="CS188">CS188</a>
+            
+            <a class="tag" href="/tags/#AI" title="AI">AI</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
